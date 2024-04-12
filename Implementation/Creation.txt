@@ -1,0 +1,161 @@
+CREATE TABLE IF NOT EXISTS DimCustomer (
+  CustomerKey SERIAL PRIMARY KEY,
+  CustomerId VARCHAR(255) NOT NULL UNIQUE,
+  CompanyName VARCHAR(255),
+  CompanyBand VARCHAR(255),
+  Address VARCHAR(255),
+  City VARCHAR(255),
+  Region VARCHAR(255),
+  PostalCode VARCHAR(255),
+  Country VARCHAR(255),
+  Phone VARCHAR(255),
+  Fax VARCHAR(255)
+);
+
+CREATE TABLE IF NOT EXISTS DimDate (
+  DateKey INT PRIMARY KEY,
+  FullDate DATE,
+  Year INT,
+  Quarter INT,
+  MonthNumber INT,
+  MonthName VARCHAR(255),
+  WeekNumber INT,
+  DayOfMonth INT,
+  DayOfWeek VARCHAR(255),
+  IsWeekend CHAR,
+  IsHoliday CHAR
+);
+
+CREATE TABLE IF NOT EXISTS DimPromotion (
+  PromotionKey SERIAL PRIMARY KEY,
+  StartDateKey INT REFERENCES DimDate(DateKey),
+  EndDateKey INT REFERENCES DimDate(DateKey),
+  Discount DECIMAL(3,2)
+);
+
+CREATE TABLE IF NOT EXISTS DimShipper (
+  ShipperKey SERIAL PRIMARY KEY,
+  ShipperID INT NOT NULL UNIQUE,
+  CompanyName VARCHAR(255),
+  Phone VARCHAR(255)
+);
+
+CREATE TABLE IF NOT EXISTS DimSupplier (
+  SupplierKey SERIAL PRIMARY KEY,
+  SupplierID INT NOT NULL UNIQUE,
+  CompanyName VARCHAR(255),
+  ContactName VARCHAR(255),
+  ContactTitle VARCHAR(255),
+  Address VARCHAR(255),
+  City VARCHAR(255),
+  Region VARCHAR(255),
+  PostalCode VARCHAR(255),
+  Country VARCHAR(255),
+  Phone VARCHAR(255),
+  Fax VARCHAR(255),
+  HomePage VARCHAR(255)
+);
+
+CREATE TABLE IF NOT EXISTS DimProduct (
+  ProductKey SERIAL PRIMARY KEY,
+  SupplierKey INT REFERENCES DimSupplier(SupplierKey),
+  ProductID VARCHAR(255) NOT NULL UNIQUE,
+  ProductName VARCHAR(255),
+  Category VARCHAR(255),
+  CategoryDescription TEXT,
+  QuantityPerUnit INT,
+  ReorderLevel INT,
+  IsDiscontinued CHAR
+);
+
+CREATE TABLE IF NOT EXISTS DimTerritory (
+  TerritoryKey SERIAL PRIMARY KEY,
+  TerritoryID INT NOT NULL UNIQUE,
+  TerritoryName VARCHAR(255),
+  Region VARCHAR(255)
+);
+
+CREATE TABLE IF NOT EXISTS DimEmployee (
+  EmployeeKey SERIAL PRIMARY KEY,
+  EffectiveFromDateKey INT NOT NULL REFERENCES DimDate(DateKey),
+  ManagerKey INT REFERENCES DimEmployee(EmployeeKey),
+  EmployeeID VARCHAR(255) NOT NULL,
+  ManagerID VARCHAR(255),
+  LastName VARCHAR(255),
+  FirstName VARCHAR(255),
+  Title VARCHAR(255),
+  TitleOfCourtesy VARCHAR(255),
+  BirthdateKey INT REFERENCES DimDate(DateKey),
+  HireDateKey INT REFERENCES DimDate(DateKey),
+  Address VARCHAR(255),
+  City VARCHAR(255),
+  Region VARCHAR(255),
+  PostalCode VARCHAR(255),
+  Country VARCHAR(255),
+  Extension VARCHAR(255),
+  Notes TEXT,
+  EffectiveToDateKey INT REFERENCES DimDate(DateKey),
+  IsCurrent CHAR,
+  CONSTRAINT UniqueEmployeeID UNIQUE (EmployeeKey)
+);
+
+CREATE TABLE IF NOT EXISTS DimEmpTerritory (
+  EmployeeKey INT NOT NULL REFERENCES DimEmployee(EmployeeKey),
+  TerritoryKey INT NOT NULL REFERENCES DimTerritory(TerritoryKey),
+  CONSTRAINT SalesPersonTerritoryPK PRIMARY KEY (EmployeeKey, TerritoryKey)
+);
+
+CREATE TABLE IF NOT EXISTS DimPayMethodSaleChannel (
+  PayChanKey SERIAL PRIMARY KEY,
+  PaymentMethod VARCHAR(255),
+  SalesChannel VARCHAR(255)
+);
+
+CREATE TABLE IF NOT EXISTS FactOrder (
+  OrderID INT NOT NULL,
+  -- Foreign Key to the DimProduct table
+  ProductKey INT REFERENCES DimProduct(ProductKey) NOT NULL,
+  -- Foreign Key to the DimCustomer table
+  CustomerKey INT REFERENCES DimCustomer(CustomerKey) NOT NULL,
+  -- Foreign Key to the DimEmployee table
+  EmployeeKey INT REFERENCES DimEmployee(EmployeeKey),
+  -- Foreign Key to the DimPromotion table (optional)
+  PromotionKey INT REFERENCES DimPromotion(PromotionKey),
+  -- Foreign Key to the DimShipper table
+  ShipperKey INT REFERENCES DimShipper(ShipperKey),
+  -- Foreign Key to the DimDate table (assuming a date dimension table exists)
+  OrderDateKey INT REFERENCES DimDate(DateKey) NOT NULL,
+  -- Foreign Key to the DimDate table (assuming a date dimension table exists)
+  RequiredDateKey INT REFERENCES DimDate(DateKey) NOT NULL,
+  -- Foreign Key to the DimDate table (assuming a date dimension table exists)
+  ShippedDateKey INT REFERENCES DimDate(DateKey),
+  ReturnDate INT REFERENCES DimDate(DateKey),
+  PayChanKey INT REFERENCES DimPayMethodSaleChannel(PayChanKey),
+  Time TIME,
+  TillShippingDuration INT,
+  OrdToReqDuration INT,
+  UnitCost DECIMAL(10,2),
+  UnitPrice DECIMAL(10,2),
+  Quantity INT,
+  DiscountAmount DECIMAL(10,2),
+  TotalCost DECIMAL(10,2),
+  TotalPrice DECIMAL(10,2),
+  Profit DECIMAL(10,2),
+  Freight DECIMAL(10,2),
+  isReturned CHAR,
+  CONSTRAINT FactOrderPK PRIMARY KEY (OrderID , ProductKey, isreturned)
+
+);
+
+----------------
+
+CREATE TABLE IF NOT EXISTS DimProductPriceMini (
+  -- Composite Primary Key
+  ProductKey INT NOT NULL REFERENCES DimProduct(ProductKey),
+  EffFromDate INT NOT NULL REFERENCES DimDate(DateKey),
+  UnitCost INT,
+  UnitPrice INT,
+  EffToDate INT REFERENCES DimDate(DateKey),
+  IsCurrent CHAR,
+  CONSTRAINT ProductDatePK PRIMARY KEY (ProductKey, EffFromDate)
+);

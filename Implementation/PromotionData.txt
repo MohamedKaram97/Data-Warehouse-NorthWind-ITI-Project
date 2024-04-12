@@ -1,0 +1,36 @@
+INSERT INTO DimPromotion (PromotionKey, StartDateKey, EndDateKey, Discount)
+SELECT
+    ROW_NUMBER() OVER () AS PromotionKey,
+    CASE EXTRACT(MONTH FROM date)
+        WHEN 1 THEN 20240101
+        WHEN 2 THEN 20240201
+        WHEN 3 THEN 20240301
+        WHEN 4 THEN 20240401
+        WHEN 5 THEN 20240501
+        WHEN 6 THEN 20240601
+        WHEN 7 THEN 20240701
+        WHEN 8 THEN 20240801
+        WHEN 9 THEN 20240901
+        WHEN 10 THEN 20241001
+        WHEN 11 THEN 20241101
+        WHEN 12 THEN 20241201
+    END AS StartDateKey,
+    CASE EXTRACT(MONTH FROM date)
+        WHEN 1 THEN 20240106
+        WHEN 2 THEN 20240206
+        WHEN 3 THEN 20240306
+        WHEN 4 THEN 20240406
+        WHEN 5 THEN 20240506
+        WHEN 6 THEN 20240606
+        WHEN 7 THEN 20240706
+        WHEN 8 THEN 20240806
+        WHEN 9 THEN 20240906
+        WHEN 10 THEN 20241006
+        WHEN 11 THEN 20241106
+        WHEN 12 THEN 20241206
+    END AS EndDateKey,
+    ROUND(CAST(RANDOM() * 0.5 AS NUMERIC), 2) AS Discount -- Random discount between 0 and 0.5
+FROM
+    GENERATE_SERIES('2024-01-01'::DATE, '2024-12-01'::DATE, '1 month') AS date;
+
+INSERT INTO DimPromotion (PromotionKey) values(0);

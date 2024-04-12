@@ -1,0 +1,8 @@
+INSERT INTO DimPayMethodSaleChannel (PayChanKey, PaymentMethod, SalesChannel)
+VALUES
+    (1, 'Credit Card', 'Online'),
+    (2, 'Credit Card', 'On Premises'),
+    (3, 'Credit Card', 'Phone'),
+    (4, 'Cash', 'Online'),
+    (5, 'Cash', 'On Premises'),
+    (6, 'Cash', 'Phone');

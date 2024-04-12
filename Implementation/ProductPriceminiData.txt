@@ -1,0 +1,323 @@
+INSERT INTO DimProductPriceMini (ProductKey, EffFromDate, UnitCost, UnitPrice, EffToDate, IsCurrent)
+VALUES
+-- Example data, replace with actual data
+(1, 20240101, 50, 100, 20240131, 0), -- Not current
+(1, 20240201, 55, 110, NULL, 1),      -- Current, EffToDate set to NULL
+(2, 20240101, 30, 60, 20240131, 0),   -- Not current
+(2, 20240201, 35, 70, NULL, 1),       -- Current, EffToDate set to NULL
+(3, 20240101, 40, 80, 20240131, 0),   -- Not current
+(3, 20240201, 45, 90, NULL, 1),       -- Current, EffToDate set to NULL
+(4, 20240101, 25, 50, 20240131, 0),   -- Not current
+(4, 20240201, 30, 60, NULL, 1),       -- Current, EffToDate set to NULL
+(5, 20240101, 20, 40, 20240131, 0),   -- Not current
+(5, 20240201, 22, 44, NULL, 1),       -- Current, EffToDate set to NULL
+(6, 20240101, 35, 70, 20240131, 0),   -- Not current
+(6, 20240201, 40, 80, NULL, 1),       -- Current, EffToDate set to NULL
+(7, 20240101, 45, 90, 20240131, 0),   -- Not current
+(7, 20240201, 50, 100, NULL, 1),      -- Current, EffToDate set to NULL
+(8, 20240101, 55, 110, 20240131, 0),  -- Not current
+(8, 20240201, 60, 120, NULL, 1),      -- Current, EffToDate set to NULL
+(9, 20240101, 65, 130, 20240131, 0),  -- Not current
+(9, 20240201, 70, 140, NULL, 1),      -- Current, EffToDate set to NULL
+(10, 20240101, 75, 150, 20240131, 0), -- Not current
+(10, 20240201, 80, 160, NULL, 1),     -- Current, EffToDate set to NULL
+(11, 20240101, 85, 170, 20240131, 0), -- Not current
+(11, 20240201, 90, 180, NULL, 1),     -- Current, EffToDate set to NULL
+(12, 20240101, 95, 190, 20240131, 0), -- Not current
+(12, 20240201, 100, 200, NULL, 1),    -- Current, EffToDate set to NULL
+(13, 20240101, 105, 210, 20240131, 0),-- Not current
+(13, 20240201, 110, 220, NULL, 1),    -- Current, EffToDate set to NULL
+(14, 20240101, 115, 230, 20240131, 0),-- Not current
+(14, 20240201, 120, 240, NULL, 1),    -- Current, EffToDate set to NULL
+(15, 20240101, 125, 250, 20240131, 0),-- Not current
+(15, 20240201, 130, 260, NULL, 1),    -- Current, EffToDate set to NULL
+(16, 20240101, 135, 270, 20240131, 0),-- Not current
+(16, 20240201, 140, 280, NULL, 1),    -- Current, EffToDate set to NULL
+(17, 20240101, 145, 290, 20240131, 0),-- Not current
+(17, 20240201, 150, 300, NULL, 1),    -- Current, EffToDate set to NULL
+(18, 20240101, 155, 310, 20240131, 0),-- Not current
+(18, 20240201, 160, 320, NULL, 1),    -- Current, EffToDate set to NULL
+(19, 20240101, 165, 330, 20240131, 0),-- Not current
+(19, 20240201, 170, 340, NULL, 1),    -- Current, EffToDate set to NULL
+(20, 20240101, 175, 350, 20240131, 0),-- Not current
+(20, 20240201, 180, 360, NULL, 1),    -- Current, EffToDate set to NULL
+(21, 20240101, 185, 370, 20240131, 0),-- Not current
+(21, 20240201, 190, 380, NULL, 1),    -- Current, EffToDate set to NULL
+(22, 20240101, 195, 390, 20240131, 0),-- Not current
+(22, 20240201, 200, 400, NULL, 1),    -- Current, EffToDate set to NULL
+(23, 20240101, 205, 410, 20240131, 0),-- Not current
+(23, 20240201, 210, 420, NULL, 1),    -- Current, EffToDate set to NULL
+(24, 20240101, 215, 430, 20240131, 0),-- Not current
+(24, 20240201, 220, 440, NULL, 1),    -- Current, EffToDate set to NULL
+(25, 20240101, 225, 450, 20240131, 0),-- Not current
+(25, 20240201, 230, 460, NULL, 1),    -- Current, EffToDate set to NULL
+(26, 20240101, 235, 470, 20240131, 0),-- Not current
+(26, 20240201, 240, 480, NULL, 1),    -- Current, EffToDate set to NULL
+(27, 20240101, 245, 490, 20240131, 0),-- Not current
+(27, 20240201, 250, 500, NULL, 1),    -- Current, EffToDate set to NULL
+(28, 20240101, 255, 510, 20240131, 0),-- Not current
+(28, 20240201, 260, 520, NULL, 1),    -- Current, EffToDate set to NULL
+(29, 20240101, 265, 530, 20240131, 0),-- Not current
+(29, 20240201, 270, 540, NULL, 1),    -- Current, EffToDate set to NULL
+(30, 20240101, 275, 550, 20240131, 0),-- Not current
+(30, 20240201, 280, 560, NULL, 1),    -- Current, EffToDate set to NULL
+(31, 20240101, 285, 570, 20240131, 0), -- Not current
+(31, 20240201, 290, 580, NULL, 1),      -- Current, EffToDate set to NULL
+(32, 20240101, 295, 590, 20240131, 0),   -- Not current
+(32, 20240201, 300, 600, NULL, 1),       -- Current, EffToDate set to NULL
+(33, 20240101, 305, 610, 20240131, 0),   -- Not current
+(33, 20240201, 310, 620, NULL, 1),       -- Current, EffToDate set to NULL
+(34, 20240101, 315, 630, 20240131, 0),   -- Not current
+(34, 20240201, 320, 640, NULL, 1),       -- Current, EffToDate set to NULL
+(35, 20240101, 325, 650, 20240131, 0),   -- Not current
+(35, 20240201, 330, 660, NULL, 1),       -- Current, EffToDate set to NULL
+(36, 20240101, 335, 670, 20240131, 0),   -- Not current
+(36, 20240201, 340, 680, NULL, 1),       -- Current, EffToDate set to NULL
+(37, 20240101, 345, 690, 20240131, 0),   -- Not current
+(37, 20240201, 350, 700, NULL, 1),       -- Current, EffToDate set to NULL
+(38, 20240101, 355, 710, 20240131, 0),   -- Not current
+(38, 20240201, 360, 720, NULL, 1),       -- Current, EffToDate set to NULL
+(39, 20240101, 365, 730, 20240131, 0),   -- Not current
+(39, 20240201, 370, 740, NULL, 1),       -- Current, EffToDate set to NULL
+(40, 20240101, 375, 750, 20240131, 0),   -- Not current
+(40, 20240201, 380, 760, NULL, 1),       -- Current, EffToDate set to NULL
+(41, 20240101, 385, 770, 20240131, 0),   -- Not current
+(41, 20240201, 390, 780, NULL, 1),       -- Current, EffToDate set to NULL
+(42, 20240101, 395, 790, 20240131, 0),   -- Not current
+(42, 20240201, 400, 800, NULL, 1),       -- Current, EffToDate set to NULL
+(43, 20240101, 405, 810, 20240131, 0),   -- Not current
+(43, 20240201, 410, 820, NULL, 1),       -- Current, EffToDate set to NULL
+(44, 20240101, 415, 830, 20240131, 0),   -- Not current
+(44, 20240201, 420, 840, NULL, 1),       -- Current, EffToDate set to NULL
+(45, 20240101, 425, 850, 20240131, 0),   -- Not current
+(45, 20240201, 430, 860, NULL, 1),       -- Current, EffToDate set to NULL
+(46, 20240101, 435, 870, 20240131, 0),   -- Not current
+(46, 20240201, 440, 880, NULL, 1),       -- Current, EffToDate set to NULL
+(47, 20240101, 445, 890, 20240131, 0),   -- Not current
+(47, 20240201, 450, 900, NULL, 1),       -- Current, EffToDate set to NULL
+(48, 20240101, 455, 910, 20240131, 0),   -- Not current
+(48, 20240201, 460, 920, NULL, 1),       -- Current, EffToDate set to NULL
+(49, 20240101, 465, 930, 20240131, 0),   -- Not current
+(49, 20240201, 470, 940, NULL, 1),       -- Current, EffToDate set to NULL
+(50, 20240101, 475, 950, 20240131, 0),   -- Not current
+(50, 20240201, 480, 960, NULL, 1),       -- Current, EffToDate set to NULL
+(51, 20240101, 485, 970, 20240131, 0), -- Not current
+(51, 20240201, 490, 980, NULL, 1),      -- Current, EffToDate set to NULL
+(52, 20240101, 495, 990, 20240131, 0),   -- Not current
+(52, 20240201, 500, 1000, NULL, 1),       -- Current, EffToDate set to NULL
+(53, 20240101, 505, 1010, 20240131, 0),   -- Not current
+(53, 20240201, 510, 1020, NULL, 1),       -- Current, EffToDate set to NULL
+(54, 20240101, 515, 1030, 20240131, 0),   -- Not current
+(54, 20240201, 520, 1040, NULL, 1),       -- Current, EffToDate set to NULL
+(55, 20240101, 525, 1050, 20240131, 0),   -- Not current
+(55, 20240201, 530, 1060, NULL, 1),       -- Current, EffToDate set to NULL
+(56, 20240101, 535, 1070, 20240131, 0),   -- Not current
+(56, 20240201, 540, 1080, NULL, 1),       -- Current, EffToDate set to NULL
+(57, 20240101, 545, 1090, 20240131, 0),   -- Not current
+(57, 20240201, 550, 1100, NULL, 1),       -- Current, EffToDate set to NULL
+(58, 20240101, 555, 1110, 20240131, 0),   -- Not current
+(58, 20240201, 560, 1120, NULL, 1),       -- Current, EffToDate set to NULL
+(59, 20240101, 565, 1130, 20240131, 0),   -- Not current
+(59, 20240201, 570, 1140, NULL, 1),       -- Current, EffToDate set to NULL
+(60, 20240101, 575, 1150, 20240131, 0),   -- Not current
+(60, 20240201, 580, 1160, NULL, 1),       -- Current, EffToDate set to NULL
+(61, 20240101, 585, 1170, 20240131, 0),   -- Not current
+(61, 20240201, 590, 1180, NULL, 1),       -- Current, EffToDate set to NULL
+(62, 20240101, 595, 1190, 20240131, 0),   -- Not current
+(62, 20240201, 600, 1200, NULL, 1),       -- Current, EffToDate set to NULL
+(63, 20240101, 605, 1210, 20240131, 0),   -- Not current
+(63, 20240201, 610, 1220, NULL, 1),       -- Current, EffToDate set to NULL
+(64, 20240101, 615, 1230, 20240131, 0),   -- Not current
+(64, 20240201, 620, 1240, NULL, 1),       -- Current, EffToDate set to NULL
+(65, 20240101, 625, 1250, 20240131, 0),   -- Not current
+(65, 20240201, 630, 1260, NULL, 1),       -- Current, EffToDate set to NULL
+(66, 20240101, 635, 1270, 20240131, 0),   -- Not current
+(66, 20240201, 640, 1280, NULL, 1),       -- Current, EffToDate set to NULL
+(67, 20240101, 645, 1290, 20240131, 0),   -- Not current
+(67, 20240201, 650, 1300, NULL, 1),       -- Current, EffToDate set to NULL
+(68, 20240101, 655, 1310, 20240131, 0),   -- Not current
+(68, 20240201, 660, 1320, NULL, 1),       -- Current, EffToDate set to NULL
+(69, 20240101, 665, 1330, 20240131, 0),   -- Not current
+(69, 20240201, 670, 1340, NULL, 1),       -- Current, EffToDate set to NULL
+(70, 20240101, 675, 1350, 20240131, 0),   -- Not current
+(70, 20240201, 680, 1360, NULL, 1),      -- Current, EffToDate set to NULL
+(71, 20240101, 685, 1370, 20240131, 0), -- Not current
+(71, 20240201, 690, 1380, NULL, 1),      -- Current, EffToDate set to NULL
+(72, 20240101, 695, 1390, 20240131, 0),   -- Not current
+(72, 20240201, 700, 1400, NULL, 1),       -- Current, EffToDate set to NULL
+(73, 20240101, 705, 1410, 20240131, 0),   -- Not current
+(73, 20240201, 710, 1420, NULL, 1),       -- Current, EffToDate set to NULL
+(74, 20240101, 715, 1430, 20240131, 0),   -- Not current
+(74, 20240201, 720, 1440, NULL, 1),       -- Current, EffToDate set to NULL
+(75, 20240101, 725, 1450, 20240131, 0),   -- Not current
+(75, 20240201, 730, 1460, NULL, 1),       -- Current, EffToDate set to NULL
+(76, 20240101, 735, 1470, 20240131, 0),   -- Not current
+(76, 20240201, 740, 1480, NULL, 1),       -- Current, EffToDate set to NULL
+(77, 20240101, 745, 1490, 20240131, 0),   -- Not current
+(77, 20240201, 750, 1500, NULL, 1),       -- Current, EffToDate set to NULL
+(78, 20240101, 755, 1510, 20240131, 0),   -- Not current
+(78, 20240201, 760, 1520, NULL, 1),       -- Current, EffToDate set to NULL
+(79, 20240101, 765, 1530, 20240131, 0),   -- Not current
+(79, 20240201, 770, 1540, NULL, 1),       -- Current, EffToDate set to NULL
+(80, 20240101, 775, 1550, 20240131, 0),   -- Not current
+(80, 20240201, 780, 1560, NULL, 1),       -- Current, EffToDate set to NULL
+(81, 20240101, 785, 1570, 20240131, 0),   -- Not current
+(81, 20240201, 790, 1580, NULL, 1),       -- Current, EffToDate set to NULL
+(82, 20240101, 795, 1590, 20240131, 0),   -- Not current
+(82, 20240201, 800, 1600, NULL, 1),       -- Current, EffToDate set to NULL
+(83, 20240101, 805, 1610, 20240131, 0),   -- Not current
+(83, 20240201, 810, 1620, NULL, 1),       -- Current, EffToDate set to NULL
+(84, 20240101, 815, 1630, 20240131, 0),   -- Not current
+(84, 20240201, 820, 1640, NULL, 1),       -- Current, EffToDate set to NULL
+(85, 20240101, 825, 1650, 20240131, 0),   -- Not current
+(85, 20240201, 830, 1660, NULL, 1),       -- Current, EffToDate set to NULL
+(86, 20240101, 835, 1670, 20240131, 0),   -- Not current
+(86, 20240201, 840, 1680, NULL, 1),       -- Current, EffToDate set to NULL
+(87, 20240101, 845, 1690, 20240131, 0),   -- Not current
+(87, 20240201, 850, 1700, NULL, 1),       -- Current, EffToDate set to NULL
+(88, 20240101, 855, 1710, 20240131, 0),   -- Not current
+(88, 20240201, 860, 1720, NULL, 1),       -- Current, EffToDate set to NULL
+(89, 20240101, 865, 1730, 20240131, 0),   -- Not current
+(89, 20240201, 870, 1740, NULL, 1),       -- Current, EffToDate set to NULL
+(90, 20240101, 875, 1750, 20240131, 0),   -- Not current
+(90, 20240201, 880, 1760, NULL, 1),       -- Current, EffToDate set to NULL
+(91, 20240601, 885, 1770, 20240630, 0), -- Not current
+(91, 20240701, 890, 1780, NULL, 1),      -- Current, EffToDate set to NULL
+(92, 20240601, 895, 1790, 20240630, 0),   -- Not current
+(92, 20240701, 900, 1800, NULL, 1),       -- Current, EffToDate set to NULL
+(93, 20240601, 905, 1810, 20240630, 0),   -- Not current
+(93, 20240701, 910, 1820, NULL, 1),       -- Current, EffToDate set to NULL
+(94, 20240601, 915, 1830, 20240630, 0),   -- Not current
+(94, 20240701, 920, 1840, NULL, 1),       -- Current, EffToDate set to NULL
+(95, 20240601, 925, 1850, 20240630, 0),   -- Not current
+(95, 20240701, 930, 1860, NULL, 1),       -- Current, EffToDate set to NULL
+(96, 20240601, 935, 1870, 20240630, 0),   -- Not current
+(96, 20240701, 940, 1880, NULL, 1),       -- Current, EffToDate set to NULL
+(97, 20240601, 945, 1890, 20240630, 0),   -- Not current
+(97, 20240701, 950, 1900, NULL, 1),       -- Current, EffToDate set to NULL
+(98, 20240601, 955, 1910, 20240630, 0),   -- Not current
+(98, 20240701, 960, 1920, NULL, 1),       -- Current, EffToDate set to NULL
+(99, 20240601, 965, 1930, 20240630, 0),   -- Not current
+(99, 20240701, 970, 1940, NULL, 1),       -- Current, EffToDate set to NULL
+(100, 20240601, 975, 1950, 20240630, 0),   -- Not current
+(100, 20240701, 980, 1960, NULL, 1),       -- Current, EffToDate set to NULL
+(101, 20240601, 985, 1970, 20240630, 0),   -- Not current
+(101, 20240701, 990, 1980, NULL, 1),       -- Current, EffToDate set to NULL
+(102, 20240601, 995, 1990, 20240630, 0),   -- Not current
+(102, 20240701, 1000, 2000, NULL, 1),       -- Current, EffToDate set to NULL
+(103, 20240601, 1005, 2010, 20240630, 0),   -- Not current
+(103, 20240701, 1010, 2020, NULL, 1),       -- Current, EffToDate set to NULL
+(104, 20240601, 1015, 2030, 20240630, 0),   -- Not current
+(104, 20240701, 1020, 2040, NULL, 1),       -- Current, EffToDate set to NULL
+(105, 20240601, 1025, 2050, 20240630, 0),   -- Not current
+(105, 20240701, 1030, 2060, NULL, 1),       -- Current, EffToDate set to NULL
+(106, 20240601, 1035, 2070, 20240630, 0),   -- Not current
+(106, 20240701, 1040, 2080, NULL, 1),       -- Current, EffToDate set to NULL
+(107, 20240601, 1045, 2090, 20240630, 0),   -- Not current
+(107, 20240701, 1050, 2100, NULL, 1),       -- Current, EffToDate set to NULL
+(108, 20240601, 1055, 2110, 20240630, 0),   -- Not current
+(108, 20240701, 1060, 2120, NULL, 1),       -- Current, EffToDate set to NULL
+(109, 20240601, 1065, 2130, 20240630, 0),   -- Not current
+(109, 20240701, 1070, 2140, NULL, 1),       -- Current, EffToDate set to NULL
+(110, 20240601, 1075, 2150, 20240630, 0),   -- Not current
+(110, 20240701, 1080, 2160, NULL, 1),       -- Current, EffToDate set to NULL
+(111, 20241001, 1085, 2170, 20241031, 0), -- Not current
+(111, 20241101, 1090, 2180, NULL, 1),      -- Current, EffToDate set to NULL
+(112, 20241001, 1095, 2190, 20241031, 0),   -- Not current
+(112, 20241101, 1100, 2200, NULL, 1),       -- Current, EffToDate set to NULL
+(113, 20241001, 1105, 2210, 20241031, 0),   -- Not current
+(113, 20241101, 1110, 2220, NULL, 1),       -- Current, EffToDate set to NULL
+(114, 20241001, 1115, 2230, 20241031, 0),   -- Not current
+(114, 20241101, 1120, 2240, NULL, 1),       -- Current, EffToDate set to NULL
+(115, 20241001, 1125, 2250, 20241031, 0),   -- Not current
+(115, 20241101, 1130, 2260, NULL, 1),       -- Current, EffToDate set to NULL
+(116, 20241001, 1135, 2270, 20241031, 0),   -- Not current
+(116, 20241101, 1140, 2280, NULL, 1),       -- Current, EffToDate set to NULL
+(117, 20241001, 1145, 2290, 20241031, 0),   -- Not current
+(117, 20241101, 1150, 2300, NULL, 1),       -- Current, EffToDate set to NULL
+(118, 20241001, 1155, 2310, 20241031, 0),   -- Not current
+(118, 20241101, 1160, 2320, NULL, 1),       -- Current, EffToDate set to NULL
+(119, 20241001, 1165, 2330, 20241031, 0),   -- Not current
+(119, 20241101, 1170, 2340, NULL, 1),       -- Current, EffToDate set to NULL
+(120, 20241001, 1175, 2350, 20241031, 0),   -- Not current
+(120, 20241101, 1180, 2360, NULL, 1),       -- Current, EffToDate set to NULL
+(121, 20241001, 1185, 2370, 20241031, 0),   -- Not current
+(121, 20241101, 1190, 2380, NULL, 1),       -- Current, EffToDate set to NULL
+(122, 20241001, 1195, 2390, 20241031, 0),   -- Not current
+(122, 20241101, 1200, 2400, NULL, 1),       -- Current, EffToDate set to NULL
+(123, 20241001, 1205, 2410, 20241031, 0),   -- Not current
+(123, 20241101, 1210, 2420, NULL, 1),       -- Current, EffToDate set to NULL
+(124, 20241001, 1215, 2430, 20241031, 0),   -- Not current
+(124, 20241101, 1220, 2440, NULL, 1),       -- Current, EffToDate set to NULL
+(125, 20241001, 1225, 2450, 20241031, 0),   -- Not current
+(125, 20241101, 1230, 2460, NULL, 1),       -- Current, EffToDate set to NULL
+(126, 20241001, 1235, 2470, 20241031, 0),   -- Not current
+(126, 20241101, 1240, 2480, NULL, 1),       -- Current, EffToDate set to NULL
+(127, 20241001, 1245, 2490, 20241031, 0),   -- Not current
+(127, 20241101, 1250, 2500, NULL, 1),       -- Current, EffToDate set to NULL
+(128, 20241001, 1255, 2510, 20241031, 0),   -- Not current
+(128, 20241101, 1260, 2520, NULL, 1),       -- Current, EffToDate set to NULL
+(129, 20241001, 1265, 2530, 20241031, 0),   -- Not current
+(129, 20241101, 1270, 2540, NULL, 1),       -- Current, EffToDate set to NULL
+(130, 20241001, 1275, 2550, 20241031, 0),   -- Not current
+(130, 20241101, 1280, 2560, NULL, 1),       -- Current, EffToDate set to NULL
+(131, 20240101, 1285, 2570, 20240131, 0), -- Not current
+(131, 20240201, 1290, 2580, NULL, 1),      -- Current, EffToDate set to NULL
+(132, 20240101, 1295, 2590, 20240131, 0),   -- Not current
+(132, 20240201, 1300, 2600, NULL, 1),       -- Current, EffToDate set to NULL
+(133, 20240101, 1305, 2610, 20240131, 0),   -- Not current
+(133, 20240201, 1310, 2620, NULL, 1),       -- Current, EffToDate set to NULL
+(134, 20240101, 1315, 2630, 20240131, 0),   -- Not current
+(134, 20240201, 1320, 2640, NULL, 1),       -- Current, EffToDate set to NULL
+(135, 20240101, 1325, 2650, 20240131, 0),   -- Not current
+(135, 20240201, 1330, 2660, NULL, 1),       -- Current, EffToDate set to NULL
+(136, 20240101, 1335, 2670, 20240131, 0),   -- Not current
+(136, 20240201, 1340, 2680, NULL, 1),       -- Current, EffToDate set to NULL
+(137, 20240101, 1345, 2690, 20240131, 0),   -- Not current
+(137, 20240201, 1350, 2700, NULL, 1),       -- Current, EffToDate set to NULL
+(138, 20240101, 1355, 2710, 20240131, 0),   -- Not current
+(138, 20240201, 1360, 2720, NULL, 1),       -- Current, EffToDate set to NULL
+(139, 20240101, 1365, 2730, 20240131, 0),   -- Not current
+(139, 20240201, 1370, 2740, NULL, 1),       -- Current, EffToDate set to NULL
+(140, 20240101, 1375, 2750, 20240131, 0),   -- Not current
+(140, 20240201, 1380, 2760, NULL, 1),       -- Current, EffToDate set to NULL
+(141, 20240101, 1385, 2770, 20240131, 0),   -- Not current
+(141, 20240201, 1390, 2780, NULL, 1),       -- Current, EffToDate set to NULL
+(142, 20240101, 1395, 2790, 20240131, 0),   -- Not current
+(142, 20240201, 1400, 2800, NULL, 1),       -- Current, EffToDate set to NULL
+(143, 20240101, 1405, 2810, 20240131, 0),   -- Not current
+(143, 20240201, 1410, 2820, NULL, 1),       -- Current, EffToDate set to NULL
+(144, 20240101, 1415, 2830, 20240131, 0),   -- Not current
+(144, 20240201, 1420, 2840, NULL, 1),       -- Current, EffToDate set to NULL
+(145, 20240101, 1425, 2850, 20240131, 0),   -- Not current
+(145, 20240201, 1430, 2860, NULL, 1),       -- Current, EffToDate set to NULL
+(146, 20240101, 1435, 2870, 20240131, 0),   -- Not current
+(146, 20240201, 1440, 2880, NULL, 1),       -- Current, EffToDate set to NULL
+(147, 20240101, 1445, 2890, 20240131, 0),   -- Not current
+(147, 20240201, 1450, 2900, NULL, 1),       -- Current, EffToDate set to NULL
+(148, 20240101, 1455, 2910, 20240131, 0),   -- Not current
+(148, 20240201, 1460, 2920, NULL, 1),       -- Current, EffToDate set to NULL
+(149, 20240101, 1465, 2930, 20240131, 0),   -- Not current
+(149, 20240201, 1470, 2940, NULL, 1),       -- Current, EffToDate set to NULL
+(150, 20240101, 1475, 2950, 20240131, 0),   -- Not current
+(150, 20240201, 1480, 2960, NULL, 1),       -- Current, EffToDate set to NULL
+(151, 20240701, 1485, 2970, 20240731, 0), -- Not current
+(151, 20240801, 1490, 2980, NULL, 1),      -- Current, EffToDate set to NULL
+(152, 20240701, 1495, 2990, 20240731, 0),   -- Not current
+(152, 20240801, 1500, 3000, NULL, 1),       -- Current, EffToDate set to NULL
+(153, 20240701, 1505, 3010, 20240731, 0),   -- Not current
+(153, 20240801, 1510, 3020, NULL, 1),       -- Current, EffToDate set to NULL
+(154, 20240701, 1515, 3030, 20240731, 0),   -- Not current
+(154, 20240801, 1520, 3040, NULL, 1),       -- Current, EffToDate set to NULL
+(155, 20240701, 1525, 3050, 20240731, 0),   -- Not current
+(155, 20240801, 1530, 3060, NULL, 1),       -- Current, EffToDate set to NULL
+(156, 20240701, 1535, 3070, 20240731, 0),   -- Not current
+(156, 20240801, 1540, 3080, NULL, 1),       -- Current, EffToDate set to NULL
+(157, 20240701, 1545, 3090, 20240731, 0),   -- Not current
+(157, 20240801, 1550, 3100, NULL, 1),       -- Current, EffToDate set to NULL
+(158, 20240701, 1555, 3110, 20240731, 0),   -- Not current
+(158, 20240801, 1560, 3120, NULL, 1),       -- Current, EffToDate set to NULL
+(159, 20240701, 1565, 3130, 20240731, 0),   -- Not current
+(159, 20240801, 1570, 3140, NULL, 1),       -- Current, EffToDate set to NULL
+(160, 20240701, 1575, 3150, 20240731, 0),   -- Not current
+(160, 20240801, 1580, 3160, NULL, 1)       -- Current, EffToDate set to NULL

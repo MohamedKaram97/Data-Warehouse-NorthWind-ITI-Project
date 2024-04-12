@@ -1,0 +1,34 @@
+CREATE EXTENSION IF NOT EXISTS btree_gin;
+
+-- Create a bitmap index on company_band, city, and category columns
+CREATE INDEX idx_bitmap_city ON dimcustomer USING GIN (city);
+CREATE INDEX idx_bitmap_category ON dimproduct USING GIN (category);
+
+CREATE INDEX idx_hash_productname ON dimproduct USING HASH (productname);
+
+CREATE INDEX idx_diffault_customer ON factorder (CustomerKey);
+CREATE INDEX idx_diffault_employee ON factorder (EmployeeKey);
+CREATE INDEX idx_diffault_promotion ON factorder (PromotionKey);
+CREATE INDEX idx_diffault_shipper ON factorder (ShipperKey);
+CREATE INDEX idx_diffault_orderdate ON factorder (OrderDateKey);
+CREATE INDEX idx_diffault_requireddate ON factorder (RequiredDateKey);
+CREATE INDEX idx_diffault_shippeddate ON factorder (ShippedDateKey);
+CREATE INDEX idx_diffault_returndate ON factorder (ReturnDate);
+CREATE INDEX idx_diffault_paychan ON factorder (PayChanKey);
+CREATE INDEX idx_diffault_quantity ON factorder (Quantity);
+CREATE INDEX idx_diffault_discountamount ON factorder (DiscountAmount);
+CREATE INDEX idx_diffault_totalprice ON factorder (TotalPrice);
+CREATE INDEX idx_diffault_profit ON factorder (Profit);
+
+CREATE INDEX idx_diffault_startdate ON dimpromotion (StartDateKey);
+CREATE INDEX idx_diffault_enddate ON dimpromotion (EndDateKey);
+
+CREATE INDEX idx_diffault_supplier ON dimproduct (SupplierKey);
+
+CREATE INDEX idx_diffault_manager ON dimemployee (ManagerKey);
+CREATE INDEX idx_diffault_birthdate ON dimemployee (BirthDateKey);
+CREATE INDEX idx_diffault_hiredate ON dimemployee (HireDateKey);
+CREATE INDEX idx_diffault_effictivetodate ON dimemployee (EffectiveToDateKey);
+
+CREATE INDEX idx_diffault_unitcost ON dimproductpricemini(unitcost);
+CREATE INDEX idx_diffault_unitprice ON dimproductpricemini (unitprice);

@@ -1,0 +1,22 @@
+INSERT INTO DimTerritory (TerritoryKey, TerritoryID, TerritoryName, Region)
+VALUES
+    (1, 10000, 'Cairo', 'North'),
+    (2, 10001, 'Alexandria', 'North'),
+    (3, 10002, 'Luxor', 'South'),
+    (4, 10003, 'Aswan', 'South'),
+    (5, 10004, 'Hurghada', 'South'),
+    (6, 10005, 'Port Said', 'North'),
+    (7, 10006, 'Giza', 'North'),
+    (8, 10007, 'Suez', 'North'),
+    (9, 10008, 'Sharm El Sheikh', 'South'),
+    (10, 10009, 'Marsa Alam', 'South'),
+    (11, 10010, 'Dahab', 'South'),
+    (12, 10011, 'Siwa Oasis', 'West'),
+    (13, 10012, 'El Alamein', 'West'),
+    (14, 10013, 'Asyut', 'South'),
+    (15, 10014, 'Sohag', 'South'),
+    (16, 10015, 'Damietta', 'North'),
+    (17, 10016, 'Ismailia', 'North'),
+    (18, 10017, 'Qena', 'South'),
+    (19, 10018, 'Mansoura', 'North'),
+    (20, 10019, 'Minya', 'South');

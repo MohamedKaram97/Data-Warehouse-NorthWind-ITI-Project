@@ -1,0 +1,53 @@
+INSERT INTO DimDate (DateKey, FullDate, Year, Quarter, MonthNumber, MonthName, WeekNumber, DayOfMonth, DayOfWeek, IsWeekend, IsHoliday)
+SELECT
+    TO_CHAR(date, 'YYYYMMDD')::INT AS DateKey,
+    date AS FullDate,
+    EXTRACT(YEAR FROM date) AS Year,
+    EXTRACT(QUARTER FROM date) AS Quarter,
+    EXTRACT(MONTH FROM date) AS MonthNumber,
+    TO_CHAR(date, 'Month') AS MonthName,
+    EXTRACT(WEEK FROM date) AS WeekNumber,
+    EXTRACT(DAY FROM date) AS DayOfMonth,
+    TO_CHAR(date, 'Day') AS DayOfWeek,
+    CASE WHEN EXTRACT(ISODOW FROM date) IN (5, 6) THEN 1 ELSE 0 END AS IsWeekend, -- Friday and Saturday are weekends
+    CASE WHEN (date = '2024-01-01' OR date = '2024-04-25' OR date = '2024-05-01' OR date = '2024-07-23' OR date = '2024-10-06' OR date = '2024-10-28') THEN 1 ELSE 0 END AS IsHoliday -- Adding common holidays in Egypt
+FROM
+    GENERATE_SERIES('2024-01-01'::DATE, '2024-12-31'::DATE, '1 day') AS date;
+
+----------------------
+
+INSERT INTO DimDate (DateKey, FullDate, Year, Quarter, MonthNumber, MonthName, WeekNumber, DayOfMonth, DayOfWeek, IsWeekend, IsHoliday)
+SELECT
+    TO_CHAR(date, 'YYYYMMDD')::INT AS DateKey,
+    date AS FullDate,
+    EXTRACT(YEAR FROM date) AS Year,
+    EXTRACT(QUARTER FROM date) AS Quarter,
+    EXTRACT(MONTH FROM date) AS MonthNumber,
+    TO_CHAR(date, 'Month') AS MonthName,
+    EXTRACT(WEEK FROM date) AS WeekNumber,
+    EXTRACT(DAY FROM date) AS DayOfMonth,
+    TO_CHAR(date, 'Day') AS DayOfWeek,
+    CASE WHEN EXTRACT(ISODOW FROM date) IN (5, 6) THEN 1 ELSE 0 END AS IsWeekend, -- Friday and Saturday are weekends
+    CASE WHEN (date = '2010-01-01' OR date = '2010-04-25' OR date = '2010-05-01' OR date = '2010-07-23' OR date = '2010-10-06' OR date = '2010-10-28') THEN 1 ELSE 0 END AS IsHoliday -- Adding common holidays in Egypt
+FROM
+    GENERATE_SERIES('2010-01-01'::DATE, '2010-12-31'::DATE, '1 day') AS date;
+
+-----------------------------------
+
+INSERT INTO DimDate (DateKey, FullDate, Year, Quarter, MonthNumber, MonthName, WeekNumber, DayOfMonth, DayOfWeek, IsWeekend, IsHoliday)
+SELECT
+    TO_CHAR(date, 'YYYYMMDD')::INT AS DateKey,
+    date AS FullDate,
+    EXTRACT(YEAR FROM date) AS Year,
+    EXTRACT(QUARTER FROM date) AS Quarter,
+    EXTRACT(MONTH FROM date) AS MonthNumber,
+    TO_CHAR(date, 'Month') AS MonthName,
+    EXTRACT(WEEK FROM date) AS WeekNumber,
+    EXTRACT(DAY FROM date) AS DayOfMonth,
+    TO_CHAR(date, 'Day') AS DayOfWeek,
+    CASE WHEN EXTRACT(ISODOW FROM date) IN (5, 6) THEN 1 ELSE 0 END AS IsWeekend, -- Friday and Saturday are weekends
+    CASE WHEN (date = '1990-01-01' OR date = '1990-04-25' OR date = '1990-05-01' OR date = '1990-07-23' OR date = '1990-10-06' OR date = '1990-10-28') THEN 1 ELSE 0 END AS IsHoliday -- Adding common holidays in Egypt
+FROM
+    GENERATE_SERIES('1990-01-01'::DATE, '1990-12-31'::DATE, '1 day') AS date;
+
+INSERT INTO DimDate (DateKey) values(0);
